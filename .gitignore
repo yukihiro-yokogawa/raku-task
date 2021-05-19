@@ -1,2 +1,4 @@
 logging.log
 config.ini
+docker/*
+!docker/docker-compose.yml
