@@ -1,13 +1,22 @@
 # 起動
-ローカル
+・ローカル起動について｀
+1. プロジェクトrootにあるdockerディレクトリ内に.envファイルを作成
 ```
-go run main.go
-'''
+.env
 
-# 設定ファイル
-1. プロジェクトルートにconfig.iniファイルを作成
-2. iniファイルに以下を記載し適宜valueを追加
+MARIADB_ROOT_PASSWORD=
+MARIADB_DATABASE=
+MARIADB_USER=
+MARIADB_PASSWORD=
 ```
+2. .envにvalueを入力後、dockerディレクトリ内で以下を実行
+```
+docker-compose up -d
+```
+3. プロジェクトルートにconfig.iniファイルを作成
+```
+config.ini
+
 [web]
 port = 8080
 logfile = logging.log
@@ -19,11 +28,8 @@ userName =
 password = 
 protocol = 
 ```
-port ポート番号
-logfile ログファイルの名前
-driver 使用するdbのドライバ名
-name データベース名
-userName データベースに接続するアカウント名
-password データベースに接続するパスワード
-
-3. 必要な記載があれば適宜config.iniに記載
+4. iniファイルに以下を記載し適宜valueを追加
+5. dockerコンテナ起動後、プロジェクトルートで以下を実行
+```
+go run main.go
+```
