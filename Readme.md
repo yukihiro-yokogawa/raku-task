@@ -9,11 +9,12 @@ MARIADB_DATABASE=
 MARIADB_USER=
 MARIADB_PASSWORD=
 ```
-2. .envにvalueを入力後、dockerディレクトリ内で以下を実行
+2. .envにvalueを入力後、dockerディレクトリ内で以下を実行（既に実行済みの場合コンテナの起動を確認する）
 ```
 docker-compose up -d
 ```
 3. プロジェクトルートにconfig.iniファイルを作成
+4. iniファイルに以下を記載し適宜valueを追加
 ```
 config.ini
 
@@ -28,8 +29,7 @@ userName =
 password = 
 protocol = 
 ```
-4. iniファイルに以下を記載し適宜valueを追加
-5. dockerコンテナ起動後、プロジェクトルートで以下を実行
+5. プロジェクトルートで以下を実行
 ```
 go run main.go
 ```
