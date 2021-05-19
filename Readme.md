@@ -9,7 +9,7 @@ MARIADB_DATABASE=
 MARIADB_USER=
 MARIADB_PASSWORD=
 ```
-2. .envにvalueを入力後、dockerディレクトリ内で以下を実行（既に実行済みの場合コンテナの起動を確認する）
+2. .envにvalueを入力後、dockerディレクトリ内で以下を実行（既に実行済みの場合コンテナの起動を確認すること）
 ```
 docker-compose up -d
 ```
